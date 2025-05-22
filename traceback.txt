@@ -1,0 +1,32 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 168, in script
+    show goblin at Transform(xsize=, ysize=850, xalign=0.5, yalign=0.5) with dissolve
+SyntaxError: invalid syntax (game/script.rpy, line 168)
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 168, in script
+    show goblin at Transform(xsize=, ysize=850, xalign=0.5, yalign=0.5) with dissolve
+  File "D:\renpy-8.3.4-sdk\renpy\ast.py", line 1117, in execute
+    show_imspec(self.imspec, atl=getattr(self, "atl", None))
+  File "D:\renpy-8.3.4-sdk\renpy\ast.py", line 1076, in show_imspec
+    at_list = [ renpy.python.py_eval(i) for i in at_list ]
+  File "D:\renpy-8.3.4-sdk\renpy\ast.py", line 1076, in <listcomp>
+    at_list = [ renpy.python.py_eval(i) for i in at_list ]
+  File "D:\renpy-8.3.4-sdk\renpy\python.py", line 1207, in py_eval
+    code = py_compile(code, 'eval')
+  File "D:\renpy-8.3.4-sdk\renpy\python.py", line 1144, in py_compile
+    raise e
+  File "D:\renpy-8.3.4-sdk\renpy\python.py", line 1081, in py_compile
+    raise orig_e
+  File "D:\renpy-8.3.4-sdk\renpy\python.py", line 1073, in py_compile
+    tree = compile(source, filename, py_mode, ast.PyCF_ONLY_AST | flags, 1)
+SyntaxError: invalid syntax (game/script.rpy, line 168)
+
+Windows-10-10.0.22631 AMD64
+Ren'Py 8.3.4.24120703
+Noxius 1.0
+Thu Apr 24 16:30:27 2025
