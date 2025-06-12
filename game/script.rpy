@@ -456,6 +456,8 @@ label start4:
 
     n "Nggak ada pilihan... Aku harus lawan mereka!"
 
+    hide noxius
+
 menu :
     "Summon—Goblin LVL 5!":
         jump goblin
