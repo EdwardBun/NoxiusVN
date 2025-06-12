@@ -395,12 +395,22 @@ style main_menu_vbox:
 
 style main_menu_text:
     properties gui.text_properties("main_menu", accent=True)
+    font "DejaVuSans.ttf"
+    color "#FFFFFF"
+    size 32
+    outlines [ (1, "#000000", 0, 0) ]  # Efek bayangan hitam
 
 style main_menu_title:
     properties gui.text_properties("title")
+    font "DejaVuSans-Bold.ttf"
+    color "#00BFFF"
+    size 48
+    outlines [ (2, "#000000", 0, 0) ]
 
 style main_menu_version:
     properties gui.text_properties("version")
+    color "#AAAAAA"
+    size 20
 
 
 ## Game Menu screen ############################################################
