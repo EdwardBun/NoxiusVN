@@ -12,13 +12,13 @@
 ##
 ## The _() surrounding the string marks it as eligible for translation.
 
-define config.name = _("Noxius")
+define config.name = _("Fantasy Ren'py GUI template")
 
 
 ## Determines if the title given above is shown on the main menu screen. Set
 ## this to False to hide the title.
 
-define gui.show_name = True
+define gui.show_name = False
 
 
 ## The version of the game.
@@ -37,14 +37,13 @@ define gui.about = _p("""
 ## distribution. This must be ASCII-only, and must not contain spaces, colons,
 ## or semicolons.
 
-define build.name = "Noxius"
+define build.name = "Fantasy Ren'py GUI template"
 
 
 ## Sounds and music ############################################################
 
-## These three variables control, among other things, which mixers are shown
-## to the player by default. Setting one of these to False will hide the
-## appropriate mixer.
+## These three variables control which mixers are shown to the player by
+## default. Setting one of these to False will hide the appropriate mixer.
 
 define config.has_sound = True
 define config.has_music = True
@@ -62,7 +61,7 @@ define config.has_voice = True
 ## the player is at the main menu. This file will continue playing into the
 ## game, until it is stopped or another file is played.
 
-# define config.main_menu_music = "main-menu-theme.ogg"
+define config.main_menu_music = "audio/skye-cuillin-by-kevin-macleod-from-filmmusic-io.mp3"
 
 
 ## Transitions #################################################################
@@ -143,7 +142,7 @@ default preferences.afm_time = 15
 ## This generally should not be changed, and if it is, should always be a
 ## literal string, not an expression.
 
-define config.save_directory = "Noxius-1744883388"
+define config.save_directory = "Fant-template-1622630383"
 
 
 ## Icon ########################################################################
@@ -196,9 +195,9 @@ init python:
     build.documentation('*.txt')
 
 
-## A Google Play license key is required to perform in-app purchases. It can be
-## found in the Google Play developer console, under "Monetize" > "Monetization
-## Setup" > "Licensing".
+## A Google Play license key is required to download expansion files and perform
+## in-app purchases. It can be found on the "Services & APIs" page of the Google
+## Play developer console.
 
 # define build.google_play_key = "..."
 

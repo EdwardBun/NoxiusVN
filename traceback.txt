@@ -1,32 +1,69 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 168, in script
-    show goblin at Transform(xsize=, ysize=850, xalign=0.5, yalign=0.5) with dissolve
-SyntaxError: invalid syntax (game/script.rpy, line 168)
+  File "renpy/common/00gamemenu.rpy", line 174, in script
+    $ ui.interact()
+  File "renpy/common/00gamemenu.rpy", line 174, in <module>
+    $ ui.interact()
+  File "game/screens.rpy", line 889, in execute
+    screen history():
+  File "game/screens.rpy", line 889, in execute
+    screen history():
+  File "game/screens.rpy", line 896, in execute
+    use game_menu(_("History"), scroll=("vpgrid" if gui.history_height else "viewport"), yinitial=1.0, spacing=gui.history_spacing):
+  File "game/screens.rpy", line 896, in <module>
+    use game_menu(_("History"), scroll=("vpgrid" if gui.history_height else "viewport"), yinitial=1.0, spacing=gui.history_spacing):
+AttributeError: 'StoreModule' object has no attribute 'history_spacing'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 168, in script
-    show goblin at Transform(xsize=, ysize=850, xalign=0.5, yalign=0.5) with dissolve
-  File "D:\renpy-8.3.4-sdk\renpy\ast.py", line 1117, in execute
-    show_imspec(self.imspec, atl=getattr(self, "atl", None))
-  File "D:\renpy-8.3.4-sdk\renpy\ast.py", line 1076, in show_imspec
-    at_list = [ renpy.python.py_eval(i) for i in at_list ]
-  File "D:\renpy-8.3.4-sdk\renpy\ast.py", line 1076, in <listcomp>
-    at_list = [ renpy.python.py_eval(i) for i in at_list ]
-  File "D:\renpy-8.3.4-sdk\renpy\python.py", line 1207, in py_eval
-    code = py_compile(code, 'eval')
-  File "D:\renpy-8.3.4-sdk\renpy\python.py", line 1144, in py_compile
-    raise e
-  File "D:\renpy-8.3.4-sdk\renpy\python.py", line 1081, in py_compile
-    raise orig_e
-  File "D:\renpy-8.3.4-sdk\renpy\python.py", line 1073, in py_compile
-    tree = compile(source, filename, py_mode, ast.PyCF_ONLY_AST | flags, 1)
-SyntaxError: invalid syntax (game/script.rpy, line 168)
+  File "renpy/common/00gamemenu.rpy", line 174, in script
+    $ ui.interact()
+  File "D:\renpy-8.3.4-sdk\renpy\ast.py", line 827, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "D:\renpy-8.3.4-sdk\renpy\python.py", line 1178, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "renpy/common/00gamemenu.rpy", line 174, in <module>
+    $ ui.interact()
+  File "D:\renpy-8.3.4-sdk\renpy\ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "D:\renpy-8.3.4-sdk\renpy\display\core.py", line 2215, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "D:\renpy-8.3.4-sdk\renpy\display\core.py", line 2745, in interact_core
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "D:\renpy-8.3.4-sdk\renpy\display\displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "D:\renpy-8.3.4-sdk\renpy\display\displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "D:\renpy-8.3.4-sdk\renpy\display\displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  [Previous line repeated 1 more time]
+  File "D:\renpy-8.3.4-sdk\renpy\display\screen.py", line 480, in visit_all
+    callback(self)
+  File "D:\renpy-8.3.4-sdk\renpy\display\core.py", line 2745, in <lambda>
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "D:\renpy-8.3.4-sdk\renpy\display\screen.py", line 491, in per_interact
+    self.update()
+  File "D:\renpy-8.3.4-sdk\renpy\display\screen.py", line 697, in update
+    self.screen.function(**self.scope)
+  File "game/screens.rpy", line 889, in execute
+    screen history():
+  File "game/screens.rpy", line 889, in execute
+    screen history():
+  File "game/screens.rpy", line 896, in execute
+    use game_menu(_("History"), scroll=("vpgrid" if gui.history_height else "viewport"), yinitial=1.0, spacing=gui.history_spacing):
+  File "D:\renpy-8.3.4-sdk\renpy\parameter.py", line 503, in evaluate
+    value = renpy.python.py_eval(v, locals=scope)
+  File "D:\renpy-8.3.4-sdk\renpy\python.py", line 1209, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "D:\renpy-8.3.4-sdk\renpy\python.py", line 1202, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/screens.rpy", line 896, in <module>
+    use game_menu(_("History"), scroll=("vpgrid" if gui.history_height else "viewport"), yinitial=1.0, spacing=gui.history_spacing):
+AttributeError: 'StoreModule' object has no attribute 'history_spacing'
 
 Windows-10-10.0.22631 AMD64
 Ren'Py 8.3.4.24120703
 Noxius 1.0
-Thu Apr 24 16:30:27 2025
+Fri Jun 13 21:06:49 2025
